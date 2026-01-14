@@ -175,6 +175,7 @@ ul {
   justify-content: center;
   padding: 50px 20px;
   margin: 30px auto;
+  overflow: hidden;
 }
 
 .welcome-box {
@@ -189,6 +190,7 @@ ul {
   box-shadow:
     0 20px 50px rgba(0, 0, 0, 0.4);
   animation: fadeUp 1.2s ease;
+  overflow: hidden;
 }
 
 .wel-name {
@@ -246,17 +248,61 @@ ul {
   box-shadow: 0 22px 45px rgba(0, 0, 0, 0.45);
 }
 
+
+.welcome-box > * {
+  opacity: 0;
+  transform: translateY(50px);
+  animation-fill-mode: forwards;
+}
+
+.welcome-box .wel-name {
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.welcome-box .scl-name {
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.7s;
+}
+
+.welcome-box .sologan-1 {
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 1.1s;
+}
+
+.welcome-box .sologan-2 {
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 1.5s;
+}
+
+.welcome-box .apply-btn {
+  animation: fadeUpScale 1s ease forwards;
+  animation-delay: 1.9s;
+  transform-origin: center;
+}
+
 @keyframes fadeUp {
-  from {
+  0% {
     opacity: 0;
     transform: translateY(50px);
   }
-
-  to {
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
+@keyframes fadeUpScale {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 
 @media (max-width:600px) {
   #scl-pic-box {
@@ -288,6 +334,7 @@ ul {
     line-height: 1.1;
   }
 }
+
 
 #About {
   width: 100%;
@@ -598,7 +645,7 @@ ul {
 }
 
 .facility-item {
-  background: #eee;
+  background:rgb(200, 228, 212);
   width: 100%;
   height: 205px;
   border-radius: 20px;
@@ -608,7 +655,7 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  box-shadow: 3px 10px 20px black;
+  /* box-shadow: 3px 10px 20px black; */
   overflow: hidden;
   transition: 0.3s;
   opacity: 0;
@@ -620,7 +667,7 @@ ul {
 
 .facility-item:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
 }
 
 .facility-item i {
@@ -642,6 +689,7 @@ ul {
   font-size: 17px;
   line-height: 1.1;
   color: #3d3d3d;
+  text-align: center;
   padding: 0px 10px;
 }
 
@@ -662,6 +710,7 @@ ul {
 
   .facility-box {
     grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
   }
 
   #Facility .our-fac {
@@ -670,6 +719,7 @@ ul {
 
   .facility-item {
     height: 220px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
   }
 
   .facility-item h3 {
@@ -717,7 +767,7 @@ ul {
 .plus-Man {
   background: #ffffff;
   padding: 35px;
-  margin: 20px;
+  margin: 15px;
   border-radius: 12px;
   box-shadow: 8px 8px 15px #7a7878;
   display: flex;
@@ -785,7 +835,7 @@ ul {
   }
 
   .program-box {
-    padding: 25px;
+    padding: 15px;
     grid-template-columns: repeat(1, 1fr);
   }
 
@@ -816,9 +866,7 @@ ul {
 }
 
 #Contact {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
   padding: 80px 0 40px 0;
   background-color: rgb(43, 39, 39);
 }
@@ -828,11 +876,13 @@ ul {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   max-width: 900px;
-  margin: auto;
+  margin:auto;
+
 }
 
 .cont-detail {
   color: white;
+  margin: 10px;
 }
 
 .cont-info {
@@ -877,8 +927,6 @@ ul {
   color: white;
   font-size: 17px;
 }
-
-/* Map */
 .cont-map {
   height: 300px;
 }
@@ -934,7 +982,7 @@ hr {
   }
 
   .cont-map {
-    height: 200px;
+    height: 230px;
   }
 
   #Contact {
