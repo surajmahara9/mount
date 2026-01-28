@@ -240,7 +240,7 @@ ul {
   position: relative;
   width: 90%;
   min-height: 90vh;
-  background-image: linear-gradient(rgba(12, 15, 60, 0.3), rgba(12, 15, 60, 0.3)), url("Image/scl-pic.png");
+  background-image: url("Image/scl-pic.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -255,8 +255,8 @@ ul {
 .welcome-box {
   max-width: 800px;
   background: linear-gradient(135deg,
-      rgba(72, 61, 139, 0.7),
-      rgba(48, 43, 99, 0.7));
+      rgba(72, 61, 139, 0.8),
+      rgba(48, 43, 99, 0.8));
   border-radius: 28px;
   padding: 55px 55px;
   text-align: center;
@@ -311,7 +311,7 @@ ul {
 .apply-btn a {
   text-decoration: none;
   color: #222;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 700;
   letter-spacing: 1px;
 }
@@ -408,6 +408,9 @@ ul {
     font-size: 0.9rem;
     line-height: 1.1;
   }
+  .apply-btn a {
+    font-size: 17px;
+  }
 }
 
 
@@ -440,6 +443,10 @@ ul {
   .sologan-2 {
     font-size: 1.1rem;
     line-height: 1.1;
+  }
+  
+  .apply-btn a {
+    font-size: 18px;
   }
 }
 
